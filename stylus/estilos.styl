@@ -1,3 +1,49 @@
 @import "normalize.styl"
-h1
-    color blue
+gris_oscuro = #333333
+gris_claro = #818181
+
+a
+    text-decoration none
+body 
+    font-size 16px
+    font-family 'Noto Sans', sans-serif
+figure
+    margin 0
+.button-menu
+    position absolute
+    top 50%
+    margin-top -10px
+    left 0.5rem
+.container
+    padding 1.4rem
+    font-size 0
+    text-align center
+.name
+    color gris_oscuro
+.menu
+    display none
+.author
+    color gris_claro
+.reative 
+    position relative
+.border-bottom
+    border-bottom 1px solid gris_claro
+.header
+    height 3.5rem
+    position relative
+    .title
+        font-size 1.2rem
+        text-align center
+        margin 0
+        line-height 3.5em
+.song
+    width 8rem
+    display inline-block
+    font-size 1rem
+    margin-right 1rem
+    margin-bottom 1rem
+    text-align left
+    &:nth-child(even)
+        margin-right 0
+    p 
+        margin 0.5rem 0

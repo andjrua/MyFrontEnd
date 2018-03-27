@@ -2,7 +2,9 @@
 @import "fonts.styl"
 gris_oscuro = #333333
 gris_claro = #818181
+gris_fondo = #F0F0F0
 rojo = red
+
 
 a
     text-decoration none
@@ -11,6 +13,9 @@ body
     font-family 'Noto Sans', sans-serif
 figure
     margin 0
+ul 
+    margin 0 
+    padding 0
 .button-menu
     position absolute
     top 50%
@@ -31,6 +36,8 @@ figure
     display none
 .author
     color gris_claro
+.wrap
+    width 1000px
 .reative 
     position relative
 .border-bottom
@@ -79,6 +86,13 @@ figure
     padding 1rem
 .right-text
     text-align right
+.left
+    float left
+.right 
+    float right
+.round
+    border-radius 50%
+    overflow hidden
 img 
     vertical-align top
 .progress
@@ -116,6 +130,90 @@ img
 .play
     .action
         font-size 1.7rem
-        
+.input
+    border 1px  solid gris_claro
+    height 2.5em
+    border-radius: 7px
+    padding 0 1em 0 2em
+.search-icon
+    position absolute
+    left 0.6em
+    top  0.8em
+    color gris_claro
+.close-icon
+    position absolute
+    right 0.6em
+    top  0.5em
+    color gris_claro
+    font-size 1.1em
+@media screen and (max-width 480px)
+    .logo
+        display none
+
+@media screen and (min-width 480px)
+    .song   
+        &:nth-child(even)
+            margin-right 1em
+    .image
+        img
+            width 100%
+            height auto
+    .playing
+        &.medium
+            width auto
+    .logo
+        display none
+
+@media screen and (min-width 1000px)
+    body 
+        background gris_fondo
+    .button-menu
+        display none
+    .menu
+        display block
+        background gris_fondo
+        overflow hidden
+        .ite
+            float left
+            list-style none
+            a
+                display block
+                color gris_oscuro
+                font-family 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+                text-transform uppercase
+                cursor pointer
+                padding 1em
+                border-top 5px solid transparent
+                &:hover
+                    border-top 5px solid gris_claro
+    .header
+        height auto
+        .title
+            display none
+    .isotipo
+         width 122px
+    .logo
+        background white 
+        display block
+        padding 1.3em 0
+        overflow hidden
+    .avatar
+        width 38px
+        height 38px
+        margin-left 0.5em
+    .username
+        color gris_claro
+        position relative
+        top 9px
+        margin-left 0.5em
+        &:after
+            content ""
+            border-top 9px solid gris_claro
+            border-left 7px solid transparent
+            border-right 7px solid transparent
+            display inline-block
+            margin-left 0.4em
+
+            
 
 

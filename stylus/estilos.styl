@@ -1,10 +1,16 @@
+@import "nib"
 @import "normalize.styl"
 @import "fonts.styl"
 gris_oscuro = #333333
 gris_claro = #818181
 gris_fondo = #F0F0F0
 rojo = red
-
+// animacion(parametro)
+//     -webkit-animation parametro 
+//     -moz-animation parametro 
+//     -o-animation parametro 
+//     -ms-animation parametro 
+//     animation parametro 
 
 a
     text-decoration none
@@ -64,6 +70,7 @@ ul
 .playing
     &.small
         width 20rem
+        margin 1em auto
 .padding-tb
     padding 1rem 0
 .action
@@ -119,6 +126,7 @@ img
         background rojo
         border-radius 5px
         width 30%
+        animation 10s state infinite linear
     .circle
         position absolute
         right 0
@@ -127,6 +135,19 @@ img
         height 10px
         border-radius 50%
         background gris_oscuro
+        animation 1s circle infinite 
+
+@keyframes state
+    0%
+         width 0%
+    100%
+        width 100%
+@keyframes circle
+    0%
+        transform  scale(1)
+    100%
+        transform scale(2)
+        opacity 0
 .play
     .action
         font-size 1.7rem
@@ -146,8 +167,6 @@ img
     top  0.5em
     color gris_claro
     font-size 1.1em
-    .logo
-        display none
 .playlist
     display none
     width 22em
